@@ -1,1 +1,31 @@
 Tasks issued, json file and jenkins instance
+
+Json quick test was done using JQ.
+Text files include things such as terminal entries and json parsing. Image files show some successes and failures I had. 
+
+Some background:
+I actually had more issues getting the environment set up for the jenkins task than doing the task itself. First, I tried using
+an Ubuntu 18.04 installation through Virtualbox on Windows, only to find out that Virtualbox doesn't support nested virtualization
+with VT-X (or at least, no version i could get did). This threw a bit of a wrench in the plans, and I had to start from scratch.
+Next, I installed Ubuntu on some free space with dual-boot, but the installation itself was a mess and hanged from the smallest things
+due to the laptop i'm on trying to use inexistent Nvidia drivers (wasn't a problem on the virtualbox machine). So eventually
+I found that out and disabled the relevant device in grub before install until I could get the drivers installed (Even the ubuntu install was
+hanging after the post-install restart). All this coupled with a lack of sleep recently and my calendar being filled with appointments and school
+made me feel in quite a rush.
+
+What problems did I have with the tasks themselves?
+There's a whole lot of variety in how one can accomplish them, so experience seems to play a large role. For one, until recently 
+I haven't been involved with json and yaml as much, so finding a quick and modular way to deal with the first task took more time than actually doing it in the end.
+I ended up using jq for the power and relative ease of use. With more experience, I'm sure I could get through harder tasks involving json with it.
+While the output currently with the commands I used doesn't match exactly 1 to 1 with the original file, I find it good enough at this stage and for this task
+to use it and then edit the file with a text editor for the remaining 5% of the work.
+As for the jenkins task, installing the supporting environment itself was easy (ignoring the problems described earlier, though those were more of a time-consuming factor).
+Where I had some sense of confusion however, was the jenkins installation, as there is a wealth of ways to install and use it.
+As I had some issues involving time available for doing the task, so far I opted for a more basic configuration.
+
+All in all, the tasks themselves were successes I'd say, overall.
+
+What would I change if I was doing these tasks myself in a more serious environment, or even in general?
+In the jenkins task, I would swap to using
+actual k8s on dedicated servers, or use microk8s for tasks that suit a local machine like my laptop.
+
