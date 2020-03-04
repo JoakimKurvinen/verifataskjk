@@ -1,11 +1,18 @@
 
 
-final
+##final
+
 jq '.[]
 | select(.colour=="blue")' input.json > blue.json
 jq '.[]
 | select(.colour=="red")' input.json > red.json
 
+## Slurps the file, giving it the [ at the beginning, the ] at the end and a comma after every }.
+jq -s . blue.json > blue.json
+jq -s . red.json > red.json
+
 jq '.[]
 | select(.colour=="blue" | not)
 | select(.colour=="red" | not)' input.json > other.json
+
+jq -s . other.json > other.json
