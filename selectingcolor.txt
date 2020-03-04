@@ -1,0 +1,11 @@
+
+
+final
+jq '.[]
+| select(.colour=="blue")' input.json > blue.json
+jq '.[]
+| select(.colour=="red")' input.json > red.json
+
+jq '.[]
+| select(.colour=="blue" | not)
+| select(.colour=="red" | not)' input.json > other.json
