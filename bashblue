@@ -1,6 +1,4 @@
 #!/bin/bash
 
-
 jq '.[]
 | select(.colour=="blue")' input.json > blue.json
-jq -s . blue.json > blue.json
