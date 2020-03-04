@@ -1,0 +1,257 @@
+joak@joak-AERO-15XV8:~$ $ sudo apt-get update
+$: command not found
+joak@joak-AERO-15XV8:~$ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+[sudo] password for joak: $: command not found
+
+Sorry, try again.
+[sudo] password for joak: 
+gpg: no valid OpenPGP data found.
+joak@joak-AERO-15XV8:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+OK
+joak@joak-AERO-15XV8:~$ sudo apt-get update
+Hit:1 http://fi.archive.ubuntu.com/ubuntu bionic InRelease                     
+Hit:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://fi.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 http://ppa.launchpad.net/teejee2008/ppa/ubuntu bionic InRelease          
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease              
+Hit:6 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Reading package lists... Done                                                  
+joak@joak-AERO-15XV8:~$ sudo apt-get install \
+>     apt-transport-https \
+>     ca-certificates \
+>     curl \
+>     gnupg-agent \
+>     software-properties-common
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ca-certificates is already the newest version (20180409).
+ca-certificates set to manually installed.
+curl is already the newest version (7.58.0-2ubuntu3.8).
+apt-transport-https is already the newest version (1.6.12).
+The following additional packages will be installed:
+  python3-software-properties software-properties-gtk
+The following NEW packages will be installed:
+  gnupg-agent
+The following packages will be upgraded:
+  python3-software-properties software-properties-common
+  software-properties-gtk
+3 upgraded, 1 newly installed, 0 to remove and 274 not upgraded.
+Need to get 101 kB of archives.
+After this operation, 46,1 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://fi.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 gnupg-agent all 2.2.4-1ubuntu1.2 [4 880 B]
+Get:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates/main amd64 software-properties-common all 0.96.24.32.12 [10,0 kB]
+Get:3 http://fi.archive.ubuntu.com/ubuntu bionic-updates/main amd64 software-properties-gtk all 0.96.24.32.12 [62,7 kB]
+Get:4 http://fi.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-software-properties all 0.96.24.32.12 [23,6 kB]
+Fetched 101 kB in 0s (738 kB/s)                          
+Selecting previously unselected package gnupg-agent.
+(Reading database ... 163866 files and directories currently installed.)
+Preparing to unpack .../gnupg-agent_2.2.4-1ubuntu1.2_all.deb ...
+Unpacking gnupg-agent (2.2.4-1ubuntu1.2) ...
+Preparing to unpack .../software-properties-common_0.96.24.32.12_all.deb ...
+Unpacking software-properties-common (0.96.24.32.12) over (0.96.24.32.9) ...
+Preparing to unpack .../software-properties-gtk_0.96.24.32.12_all.deb ...
+Unpacking software-properties-gtk (0.96.24.32.12) over (0.96.24.32.9) ...
+Preparing to unpack .../python3-software-properties_0.96.24.32.12_all.deb ...
+Unpacking python3-software-properties (0.96.24.32.12) over (0.96.24.32.9) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+Processing triggers for desktop-file-utils (0.23-1ubuntu3.18.04.2) ...
+Processing triggers for libglib2.0-0:amd64 (2.56.4-0ubuntu0.18.04.4) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for shared-mime-info (1.9-2) ...
+Setting up python3-software-properties (0.96.24.32.12) ...
+Processing triggers for gnome-menus (3.13.3-11ubuntu1.1) ...
+Processing triggers for dbus (1.12.2-1ubuntu1.1) ...
+Setting up gnupg-agent (2.2.4-1ubuntu1.2) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Setting up software-properties-common (0.96.24.32.12) ...
+Setting up software-properties-gtk (0.96.24.32.12) ...
+joak@joak-AERO-15XV8:~$ sudo apt-get update
+Hit:1 http://fi.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://fi.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 http://ppa.launchpad.net/teejee2008/ppa/ubuntu bionic InRelease          
+Hit:5 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+Fetched 88,7 kB in 1s (92,3 kB/s)                                
+Reading package lists... Done
+joak@joak-AERO-15XV8:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package docker-ce is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'docker-ce' has no installation candidate
+E: Unable to locate package docker-ce-cli
+E: Unable to locate package containerd.io
+E: Couldn't find any package by glob 'containerd.io'
+E: Couldn't find any package by regex 'containerd.io'
+joak@joak-AERO-15XV8:~$ sudo add-apt-repository \
+>    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+>    $(lsb_release -cs) \
+>    stable"
+Hit:1 http://fi.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://fi.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 http://ppa.launchpad.net/teejee2008/ppa/ubuntu bionic InRelease          
+Hit:5 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Get:6 https://download.docker.com/linux/ubuntu bionic InRelease [64,4 kB]      
+Get:7 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]    
+Get:8 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [10,7 kB]
+Fetched 164 kB in 1s (133 kB/s)                                
+Reading package lists... Done
+joak@joak-AERO-15XV8:~$ sudo apt-key fingerprint 0EBFCD88
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+
+joak@joak-AERO-15XV8:~$ sudo apt-get update
+Hit:1 http://fi.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://fi.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Hit:5 https://download.docker.com/linux/ubuntu bionic InRelease                
+Hit:6 http://ppa.launchpad.net/teejee2008/ppa/ubuntu bionic InRelease          
+Get:7 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]    
+Fetched 88,7 kB in 1s (106 kB/s)                                
+Reading package lists... Done
+joak@joak-AERO-15XV8:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount git git-man liberror-perl pigz
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli git git-man
+  liberror-perl pigz
+0 upgraded, 9 newly installed, 0 to remove and 274 not upgraded.
+Need to get 90,5 MB of archives.
+After this operation, 418 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://fi.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1 [57,4 kB]
+Get:2 http://fi.archive.ubuntu.com/ubuntu bionic/universe amd64 aufs-tools amd64 1:4.9+20170918-1ubuntu1 [104 kB]
+Get:3 https://download.docker.com/linux/ubuntu bionic/stable amd64 containerd.io amd64 1.2.13-1 [20,1 MB]
+Get:4 http://fi.archive.ubuntu.com/ubuntu bionic/universe amd64 cgroupfs-mount all 1.4 [6 320 B]
+Get:5 http://fi.archive.ubuntu.com/ubuntu bionic/main amd64 liberror-perl all 0.17025-1 [22,8 kB]
+Get:6 http://fi.archive.ubuntu.com/ubuntu bionic-updates/main amd64 git-man all 1:2.17.1-1ubuntu0.5 [803 kB]
+Get:7 http://fi.archive.ubuntu.com/ubuntu bionic-updates/main amd64 git amd64 1:2.17.1-1ubuntu0.5 [3 912 kB]
+Get:8 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce-cli amd64 5:19.03.7~3-0~ubuntu-bionic [42,5 MB]
+Get:9 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce amd64 5:19.03.7~3-0~ubuntu-bionic [22,9 MB]
+Fetched 90,5 MB in 1min 58s (769 kB/s)                                         
+Selecting previously unselected package pigz.
+(Reading database ... 163870 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.9+20170918-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.9+20170918-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.2.13-1_amd64.deb ...
+Unpacking containerd.io (1.2.13-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.7~3-0~ubuntu-bionic_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.7~3-0~ubuntu-bionic) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.7~3-0~ubuntu-bionic_amd64.deb ...
+Unpacking docker-ce (5:19.03.7~3-0~ubuntu-bionic) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../6-liberror-perl_0.17025-1_all.deb ...
+Unpacking liberror-perl (0.17025-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../7-git-man_1%3a2.17.1-1ubuntu0.5_all.deb ...
+Unpacking git-man (1:2.17.1-1ubuntu0.5) ...
+Selecting previously unselected package git.
+Preparing to unpack .../8-git_1%3a2.17.1-1ubuntu0.5_amd64.deb ...
+Unpacking git (1:2.17.1-1ubuntu0.5) ...
+Setting up aufs-tools (1:4.9+20170918-1ubuntu1) ...
+Setting up git-man (1:2.17.1-1ubuntu0.5) ...
+Setting up containerd.io (1.2.13-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Processing triggers for ureadahead (0.100.0-21) ...
+ureadahead will be reprofiled on next reboot
+Setting up liberror-perl (0.17025-1) ...
+Setting up cgroupfs-mount (1.4) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for systemd (237-3ubuntu10.24) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up docker-ce-cli (5:19.03.7~3-0~ubuntu-bionic) ...
+Setting up pigz (2.4-1) ...
+Setting up git (1:2.17.1-1ubuntu0.5) ...
+Setting up docker-ce (5:19.03.7~3-0~ubuntu-bionic) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for ureadahead (0.100.0-21) ...
+Processing triggers for systemd (237-3ubuntu10.24) ...
+joak@joak-AERO-15XV8:~$ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 41.4M  100 41.4M    0     0  1924k      0  0:00:22  0:00:22 --:--:-- 1665k
+joak@joak-AERO-15XV8:~$ chmod +x ./kubectl
+joak@joak-AERO-15XV8:~$ sudo mv ./kubectl /usr/local/bin/kubectl
+joak@joak-AERO-15XV8:~$ kubectl version --client
+Client Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.3", GitCommit:"06ad960bfd03b39c8310aaf92d1e7c12ce618213", GitTreeState:"clean", BuildDate:"2020-02-11T18:14:22Z", GoVersion:"go1.13.6", Compiler:"gc", Platform:"linux/amd64"}
+joak@joak-AERO-15XV8:~$ https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+bash: https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3: No such file or directory
+joak@joak-AERO-15XV8:~$ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  6794  100  6794    0     0  27730      0 --:--:-- --:--:-- --:--:-- 27617
+Downloading https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+joak@joak-AERO-15XV8:~$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+>   && chmod +x minikube
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 48.2M  100 48.2M    0     0  1597k      0  0:00:30  0:00:30 --:--:-- 1916k
+joak@joak-AERO-15XV8:~$ sudo mkdir -p /usr/local/bin/
+joak@joak-AERO-15XV8:~$ sudo install minikube /usr/local/bin/
+joak@joak-AERO-15XV8:~$ sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+Hit:1 http://fi.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://fi.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://fi.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 http://ppa.launchpad.net/teejee2008/ppa/ubuntu bionic InRelease          
+Hit:5 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Get:6 http://download.virtualbox.org/virtualbox/debian bionic InRelease [4 432 B]
+Hit:7 https://download.docker.com/linux/ubuntu bionic InRelease                
+Get:8 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+Err:6 http://download.virtualbox.org/virtualbox/debian bionic InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY A2F683C52980AECF
+Reading package lists... Done                                    
+W: GPG error: http://download.virtualbox.org/virtualbox/debian bionic InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY A2F683C52980AECF
+E: The repository 'http://download.virtualbox.org/virtualbox/debian bionic InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+joak@joak-AERO-15XV8:~$ minikube start — vm-driver=virtualbox
+😄  minikube v1.7.3 on Ubuntu 18.04
+✨  Automatically selected the virtualbox driver
+💿  Downloading VM boot image ...
+    > minikube-v1.7.3.iso.sha256: 65 B / 65 B [--------------] 100.00% ? p/s 0s
+    > minikube-v1.7.3.iso: 7.92 MiB / 167.39 MiB [ 4.73% 2.22 MiB p/s ETA 1m11s^C
+joak@joak-AERO-15XV8:~$ minikube start --vm-driver=virtualbox
+😄  minikube v1.7.3 on Ubuntu 18.04
+✨  Using the virtualbox driver based on user configuration
+💿  Downloading VM boot image ...
+    > minikube-v1.7.3.iso.sha256: 65 B / 65 B [--------------] 100.00% ? p/s 0s
+    > minikube-v1.7.3.iso: 167.39 MiB / 167.39 MiB [] 100.00% 2.56 MiB p/s 1m6s
+🔥  Creating virtualbox VM (CPUs=2, Memory=2000MB, Disk=20000MB) ...
+🐳  Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+💾  Downloading kubeadm v1.17.3
+💾  Downloading kubectl v1.17.3
+💾  Downloading kubelet v1.17.3
+🚀  Launching Kubernetes ... 
+🌟  Enabling addons: default-storageclass, storage-provisioner
+⌛  Waiting for cluster to come online ...
+🏄  Done! kubectl is now configured to use "minikube"
+joak@joak-AERO-15XV8:~$ 
+
