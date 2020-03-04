@@ -17,8 +17,7 @@ What problems did I have with the tasks themselves?
 There's a whole lot of variety in how one can accomplish them, so experience seems to play a large role. For one, until recently 
 I haven't been involved with json and yaml as much, so finding a quick and modular way to deal with the first task took more time than actually doing it in the end.
 I ended up using jq for the power and relative ease of use. With more experience, I'm sure I could get through harder tasks involving json with it.
-While the output currently with the commands I used doesn't match exactly 1 to 1 with the original file, I find it good enough at this stage and for this task
-to use it and then edit the file with a text editor for the remaining 5% of the work.
+A bash script for jq makes the task even less time-consuming, how nice.
 As for the jenkins task, installing the supporting environment itself was easy (ignoring the problems described earlier, though those were more of a time-consuming factor).
 Where I had some sense of confusion however, was the jenkins installation, as there is a wealth of ways to install and use it.
 As I had some issues involving time available for doing the task, so far I opted for a more basic configuration.
