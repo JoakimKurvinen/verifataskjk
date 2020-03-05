@@ -22,6 +22,8 @@ As for the jenkins task, installing the supporting environment itself was easy (
 Where I had some sense of confusion however, was the jenkins installation, as there is a wealth of ways to install and use it.
 As I had some issues involving time available for doing the task, so far I opted for a more basic configuration.
 
+I attempted to install sonarqube, but ran out of time
+
 All in all, the tasks themselves were successes I'd say, overall.
 
 What would I change if I was doing these tasks myself in a more serious environment, or even in general?
