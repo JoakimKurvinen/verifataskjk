@@ -1,4 +1,5 @@
-Tasks issued, json file and jenkins instance
+Tasks issued, parsing of json file for red, blue, and other colors to a new json file,
+and to run a Jenkins instance to build a VScode task combined with Docker, Minikube and Kube Helm.
 
 Json quick test was done using JQ.
 Text files include things such as terminal entries and json parsing. Image files show some successes and failures I had. 
@@ -29,4 +30,5 @@ All in all, the tasks themselves were successes I'd say, overall.
 What would I change if I was doing these tasks myself in a more serious environment, or even in general?
 In the jenkins task, I would swap to using
 actual k8s on dedicated servers, or use microk8s for tasks that suit a local machine like my laptop.
+
 
